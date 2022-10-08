@@ -3,6 +3,8 @@
     border-radius: 20px;
     padding:20px 15px;
     margin-bottom: 20px;
+    width: 100%;
+    max-width: 560px;
 }
 
 .benefit__box__wpr:last-child{
@@ -30,4 +32,64 @@
     font-size: .7rem;
     font-weight: 500;
     color: #64607D;
+}
+
+@media only screen and (min-width:520px) {
+    .benefit__box__wpr{
+        padding:30px 20px;
+    }
+
+    .box__icon__wpr{
+        width: 35px;
+    }
+
+    .benefit__title{
+        font-size: 1.1rem;
+    }
+
+    .benefit__description{
+        font-size: .75rem;
+    }
+}
+
+@media only screen and (min-width:780px){
+    .benefit__box__wpr{
+        padding:40px 25px;
+        margin-bottom: 0;
+    }
+
+    .box__icon__wpr{
+        width: 40px;
+        margin-bottom: 9px;
+    }
+
+    .benefit__title{
+        font-size: 1.3rem;
+        margin-bottom: 9px;
+    }
+
+    .benefit__description{
+        font-size: .85rem;
+    }
+}
+
+@media only screen and (min-width:1100px) {
+
+    .benefit__box__wpr{
+        padding:50px 30px;
+    }
+    
+    .box__icon__wpr{
+        width: 45px;
+        margin-bottom: 10px;
+    }
+
+    .benefit__title{
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+
+    .benefit__description{
+        font-size: 1.1rem;
+    }
 }
