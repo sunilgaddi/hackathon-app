@@ -19,6 +19,7 @@ input{
 body{
   width: 100vw;
   height: auto;
+  min-width: 350px;
 }
 
 
