@@ -1,0 +1,33 @@
+.benefit__box__wpr{
+    background: #F8F9FD;
+    border-radius: 20px;
+    padding:20px 15px;
+    margin-bottom: 20px;
+}
+
+.benefit__box__wpr:last-child{
+    margin-bottom: 0;
+}
+
+.box__icon__wpr{
+    width: 30px;
+    height: auto;
+    margin-bottom: 8px;
+}
+
+.icon{
+    width: 100%;
+    height: auto;
+}
+
+.benefit__title{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.benefit__description{
+    font-size: .7rem;
+    font-weight: 500;
+    color: #64607D;
+}

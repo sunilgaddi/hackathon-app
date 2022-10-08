@@ -1,0 +1,93 @@
+.card__section{
+    width: 300px;
+    height: auto;
+    background: #FFFFFF;
+    border-radius: 15px;
+}
+
+.card__banner{
+    width: 100%;
+    height: auto;
+}
+
+.card__image{
+    width: 100%;
+    height: 100%;
+}
+
+.card__content{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding:15px;
+}
+
+.challenge__status{
+    font-family: 'Inter', sans-serif;
+    font-size: .6rem;
+    font-weight: 400;
+    padding:5px 20px;
+    background: #F2C94C40;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.challenge__name{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.start__or__end__status{
+    font-weight: 500;
+    font-size: .75rem;
+    margin-bottom: 5px;
+    color: #444444;
+}
+
+.timer__or__date{
+    display: flex;
+    gap:5px;
+    margin-bottom: 20px;
+}
+
+.counter{
+    display: block;
+    font-size: .95rem;
+    font-weight: 600;
+    color:#454545;
+}
+
+.counter__label{
+    font-family: 'Inter', sans-serif;
+    font-size: .6rem;
+    font-weight: 500;
+    color:#4F4F4F;
+}
+
+.colon{
+    position: relative;
+    top:-2px;
+    font-size: .95rem;
+    font-weight: 600;
+    color:#454545;
+}
+
+.date{
+    font-size: .9rem;
+    font-weight: 600;
+    color: #454545;
+}
+
+
+.participate__btn{
+    font-size: .8rem;
+    font-weight: 600;
+    background: #44924C;
+    color: #FFFFFF;
+    border-radius: 5px;
+    padding: 6px 15px;
+    margin-bottom:10px;
+}

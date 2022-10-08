@@ -1,0 +1,26 @@
+header{
+    position: absolute;
+    width: 100%;
+    height:64px;
+    top:0;
+    left:0;
+    
+    display: flex;
+    align-items: center;
+
+    padding-left: 15px;
+
+    background: #FFFFFF;
+    z-index:100;
+}
+
+
+.logo__ctr{
+    width: 87px;
+    height:auto;
+}
+
+.logo{
+    width:100%;
+    height:auto;
+}

@@ -1,0 +1,13 @@
+.challenge__benefits__section{
+    width: 100%;
+    height:auto;
+    background: #FFFFFF;
+    padding:40px 15px;
+}
+
+.cb__question{
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 40px;
+}
