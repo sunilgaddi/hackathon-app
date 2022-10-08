@@ -96,11 +96,13 @@
     height: auto;
     left: 0;
     right: 0;
+    top:20px;
     background: #FFFFFF;
     transform: translateY(-50%);
     opacity: 0;
     pointer-events: none;
     border-radius: 0 0 5px 5px;
+    padding: 10px;
 }
 
 .show__filters{
@@ -135,6 +137,7 @@
     font-size: .7rem;
     margin-left: 8px;
     color: #858585;
+    cursor: pointer;
 }
 
 .filter__checkbox{
@@ -142,6 +145,7 @@
     width: 13px;
     height: 13px;
     border-color: #003145;
+    cursor: pointer;
 }
 .filters__names{
     display: flex;
