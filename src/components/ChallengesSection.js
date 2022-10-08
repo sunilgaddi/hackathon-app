@@ -61,6 +61,7 @@ const ChallengesSection = () => {
     const [statusFilters, setStatusFilters] = useState([]);
     const [levelsFilters, setLevelsFilters] = useState([]);
     const [statusBasedData, setStatusBasedData] = useState([]);
+    const [levelsBasedData, setLevelsBasedData] = useState([]);
     const [filteredData, setFilteredData] = useState([]);
     const [showFilters, setShowFilters] = useState(false);
 
@@ -76,20 +77,20 @@ const ChallengesSection = () => {
     useEffect(() => {
         const date = new Date().getTime();
 
-        challenges.map( (item) => {
+        challenges.map((item) => {
             let start = new Date(item.startDate).getTime();
             let end = new Date(item.endDate).getTime();
 
-            start = start-date;
-            end = end-date;
+            start = start - date;
+            end = end - date;
 
-            if(start < 0 && end < 0){
+            if (start < 0 && end < 0) {
                 item.status = 'Past';
             }
-            else if(start <= 0 && end > 0){
+            else if (start <= 0 && end > 0) {
                 item.status = 'Active'
             }
-            else{
+            else {
                 item.status = 'Upcoming'
             }
 
@@ -97,20 +98,20 @@ const ChallengesSection = () => {
 
         })
 
-    },[])
+    }, [])
 
     useEffect(() => {
-        if(statusFilters.includes('All') || statusFilters.length === 0){
+        if (statusFilters.includes('All') || statusFilters.length === 0) {
             setStatusBasedData(challenges);
         }
-        else{
+        else {
             let data = [];
-            for(let i=0; i<statusFilters.length; i++){
+            for (let i = 0; i < statusFilters.length; i++) {
                 challenges.map((item) => item.status === statusFilters[i] && data.push(item));
             }
             setStatusBasedData(data);
         }
-    },[statusFilters])
+    }, [statusFilters])
 
     const handleLevelsFilters = (e) => {
         if (e.target.checked) {
@@ -123,18 +124,37 @@ const ChallengesSection = () => {
     };
 
     useEffect(() => {
-        if(levelsFilters.length === 0){
+        if (levelsFilters.length === 0) {
+            setLevelsBasedData(statusBasedData);
             setFilteredData(statusBasedData);
         }
-        else{
+        else {
             let data = [];
-            for(let i=0; i<levelsFilters.length; i++){
+            for (let i = 0; i < levelsFilters.length; i++) {
                 statusBasedData.map((item) => item.level === levelsFilters[i] && data.push(item));
             }
-            setFilteredData(data);
+            setLevelsBasedData(data);
+            setFilteredData(levelsBasedData);
         }
-    },[levelsFilters,statusFilters,statusBasedData]);
+    }, [levelsFilters, statusFilters, statusBasedData, levelsBasedData]);
 
+    const handleSearch = (e) => {
+
+        let searchChallenge = e.target.value;
+
+        if (searchChallenge.length !== 0) {
+            let data = [];
+            levelsBasedData.forEach((item) => {
+                if(item.challengeName.toLowerCase().match(searchChallenge)){
+                    data.push(item);
+                }
+            });
+            setFilteredData(data)
+        }
+        else{
+            setFilteredData(levelsBasedData);
+        };
+    };
 
 
     return (
@@ -143,7 +163,7 @@ const ChallengesSection = () => {
                 <h4 className='section__heading'>Explore Challenges</h4>
                 <div className='input__filter__wpr'>
                     <span className='input__icon__wpr'>
-                        <input type='search' placeholder='Search' />
+                        <input type='search' placeholder='Search' onChange={(e) => handleSearch(e)} />
                         <div className='search__icon__wpr'>
                             <img className='search__icon' src={searchicon} alt='search-icon' />
                         </div>
@@ -201,7 +221,7 @@ const ChallengesSection = () => {
             </div>
 
             <div className='challenge__card__wpr'>
-            {filteredData.map((item, id) => <ChallengeCard key={id} data={item}/>)}
+                {filteredData.map((item, id) => <ChallengeCard key={id} data={item} />)}
             </div>
         </div>
     );
