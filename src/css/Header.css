@@ -24,3 +24,27 @@ header{
     width:100%;
     height:auto;
 }
+
+@media only screen and (min-width:520px){
+    header{
+        padding-left:30px;
+    }
+}
+
+@media only screen and (min-width:780px){
+    header{
+        padding-left: 50px;
+    }
+}
+
+@media only screen and (min-width:1080px) {
+    header{
+        padding-left: 90px;
+    }
+}
+
+@media only screen and (min-width:1280px){
+    header{
+        padding-left: 100px;
+    }
+}
