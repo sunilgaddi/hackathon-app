@@ -1,0 +1,254 @@
+.createchallenge__section {
+    width: 100%;
+    height: auto;
+    padding-top: 60px;
+}
+
+.createchallenge__title__wpr {
+    width: 100%;
+    background: #F8F9FD;
+    padding: 25px 15px;
+    margin-bottom: 5px;
+}
+
+.message {
+    font-size: .9rem;
+    padding-left: 15px;
+    color: rgb(71, 51, 182);
+}
+
+.createchallenge__title
+{
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+}
+
+form {
+    margin: 13px 15px;
+}
+
+.inputs__label__wpr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.challenge__label {
+    font-size: .8rem;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.challenge__field,
+.upload__label,
+.level__options {
+    width: 100%;
+    max-width: 400px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #B7B7B7;
+    height: auto;
+    padding: 7px 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: .8rem;
+}
+
+.challenge__start__date__field,
+.challenge__end__date__field {
+    color: #333333;
+    padding-right: 50px;
+}
+
+.calender__field__icon__wpr {
+    position: relative;
+}
+
+.calender__icon__wpr {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+}
+
+.calender__icon {
+    width: 100%;
+    height: auto;
+}
+
+
+.challenge__desc__field {
+    resize: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.image__upload__field {
+    display: none;
+}
+
+.upload__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #666666;
+    background: #F4F4F4;
+    border: 1px solid #D9D9D9;
+    width: 200px;
+}
+
+.upload__label img {
+    color: #666666;
+}
+
+.challenge__level__field {
+    background: transparent;
+    max-width: 200px;
+}
+
+.level__options {
+    font-family: 'Inter', sans-serif;
+}
+
+.create__challenge__btn {
+    outline: none;
+    border: none;
+    padding: 4px 15px;
+    color: #FFFFFF;
+    margin-top: 10px;
+    border-radius: 5px;
+    background: #44924C;
+    font-size: .8rem;
+}
+
+@media only screen and (min-width:520px) {
+    .createchallenge__title__wpr {
+        padding: 15px 30px;
+        margin-bottom: 8px;
+    }
+
+    form {
+        margin: 15px 30px;
+    }
+
+    .message {
+        font-size: 1rem;
+        padding-left: 30px;
+    }
+
+    .createchallenge__title
+    {
+        font-size: 1.2rem;
+    }
+
+    .challenge__label {
+        font-size: .84rem;
+    }
+
+    .challenge__field,
+    .upload__label,
+    .level__options {
+        padding: 8px 20px;
+        font-size: .84rem;
+    }
+
+    .challenge__start__date__field,
+    .challenge__end__date__field {
+        padding-right: 50px;
+    }
+
+    .create__challenge__btn {
+        padding: 5px 15px;
+        font-size: .84rem;
+    }
+}
+
+@media only screen and (min-width:780px) {
+    .createchallenge__title__wpr {
+        padding: 35px 50px;
+        margin-bottom: 10px;
+    }
+
+    form {
+        margin: 18px 50px;
+    }
+
+    .message {
+        font-size: 1.1rem;
+        padding-left: 50px;
+    }
+
+    .createchallenge__title
+     {
+        font-size: 1.3rem;
+    }
+
+    .challenge__label {
+        font-size: .88rem;
+    }
+
+    .challenge__field,
+    .upload__label {
+        padding: 9px 20px;
+        font-size: .88rem;
+    }
+
+    .challenge__start__date__field,
+    .challenge__end__date__field {
+        padding-right: 50px;
+    }
+
+    .create__challenge__btn {
+        padding: 6px 15px;
+        font-size: .88rem;
+    }
+}
+
+@media only screen and (min-width:1100px) {
+    .createchallenge__title__wpr {
+        padding: 40px 90px;
+        margin-bottom: 12px;
+    }
+
+    form {
+        margin: 20px 90px;
+    }
+
+    .message {
+        font-size: 1.2rem;
+        padding-left: 90px;
+    }
+
+    .createchallenge__title {
+        font-size: 1.4rem;
+    }
+
+    .challenge__label {
+        font-size: .9rem;
+    }
+
+    .challenge__field,
+    .upload__label,
+    .level__options {
+        padding: 10px 20px;
+        font-size: .9rem;
+    }
+
+    .challenge__start__date__field,
+    .challenge__end__date__field {
+        padding-right: 50px;
+    }
+
+    .create__challenge__btn {
+        padding: 7px 15px;
+        font-size: .9rem;
+    }
+}
