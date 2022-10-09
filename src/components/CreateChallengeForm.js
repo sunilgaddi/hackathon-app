@@ -1,10 +1,13 @@
 import '../css/CreateChallengeForm.css';
 import calender from '../assets/icons/uil_calender.svg';
 import cloud from '../assets/icons/bxs_cloud-upload.svg';
+import {useParams} from 'react-router-dom'
 import challenges from '../data/challenges.json'
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
+
 
 const CreateChallengeForm = () => {
+    const {id} = useParams();
     const [challenge, setChallenge] = useState({
         challengeName:"",
         status:"",
@@ -13,6 +16,13 @@ const CreateChallengeForm = () => {
         endDate:"",
         description:""
     });
+
+    useEffect(() => {
+        if(id){
+            let item = challenges[id];
+            setChallenge(item);
+        }
+    },[id]);
 
     const [message, setMessage] = useState('')
     const handleChallengeFields = (e) =>{
@@ -54,6 +64,7 @@ const CreateChallengeForm = () => {
                         type='text'
                         id='challenge__name'
                         name='challengeName'
+                        value={challenge?.challengeName}
                         onChange={(e) => handleChallengeFields(e)}
                         className='challenge_name__field challenge__field' />
                 </div>
@@ -69,6 +80,7 @@ const CreateChallengeForm = () => {
                             type='datetime-local'
                             id='challenge__start__date'
                             name='startDate'
+                            value={challenge?.startDate}
                         onChange={(e) => handleChallengeFields(e)}
                             className='challenge__start__date__field challenge__field' />
                         <div className='calender__icon__wpr'>
@@ -88,6 +100,7 @@ const CreateChallengeForm = () => {
                             type='datetime-local'
                             id='challenge__end__date'
                             name='endDate'
+                            value={challenge?.endDate}
                         onChange={(e) => handleChallengeFields(e)}
                             className='challenge__end__date__field challenge__field'
                         />
@@ -108,6 +121,7 @@ const CreateChallengeForm = () => {
                         cols={50}
                         id='challenge__desc'
                         name='description'
+                        value={challenge?.description}
                         onChange={(e) => handleChallengeFields(e)}
                         className='challenge__desc__field challenge__field' />
                 </div>
@@ -137,16 +151,17 @@ const CreateChallengeForm = () => {
                     <select
                         id='challenge__level'
                         name='level'
+                        defaultvalue={challenge?.level}
                         onChange={(e) => handleChallengeFields(e)}
                         className='challenge__level__field challenge__field' >
-                        <option className='level__options' value={""}></option>
+                        <option className='level__options' value={challenge.level || ""}>{challenge.level || ""}</option>
                         <option className='level__options' value='Easy'>Easy</option>
                         <option className='level__options' value='Medium'>Medium</option>
-                        <option className='level__options' value='High'>High</option>
+                        <option className='level__options' value='Hard'>Hard</option>
                     </select>
                 </div>
 
-                <button onClick={(e) => submitChallenge(e)} className='create__challenge__btn'>Create Challenge</button>
+                <button onClick={(e) => submitChallenge(e)} className='create__challenge__btn'>{id ? 'Update Challenge' : 'Create Challenge'}</button>
             </form>
 
         </div>

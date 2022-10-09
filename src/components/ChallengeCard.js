@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import '../css/ChallengeCard.css'
 import c1 from '../assets/cardimage/c1.png'
 
-const ChallengeCard = ({ data }) => {
+const ChallengeCard = ({ data, id}) => {
 
     const counter = (data) => {
         let date;
@@ -69,7 +69,7 @@ const ChallengeCard = ({ data }) => {
                             <span className='date'>{ date(data?.endDate) }</span>
                     }
                 </div>
-                <Link className='participate__btn' to=''>
+                <Link className='participate__btn' to={`/challenge-details/${id}`}>
                     Participate Now
                 </Link>
             </div>

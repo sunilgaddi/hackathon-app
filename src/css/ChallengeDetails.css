@@ -1,0 +1,332 @@
+.challenge__details__section{
+    width: 100%;
+    height: auto;
+}
+
+.challenge__details__ctr{
+    width: 100%;
+    height:360px;
+    padding:0 15px;
+    padding-top: 120px;
+        padding-bottom: 70px;
+    background: #003145;
+    display:flex;
+    align-items: center;
+}
+
+.status{
+    display: inline-flex;
+    gap:10px;
+    align-items: center;
+    background: #FFCE5C;
+    font-size: .65rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    padding: 5px 18px;
+    padding-right: 30px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.clock__icon{
+    width:13px;
+    height: 13px;
+}
+
+.challenge__title{
+    font-size: 1.4rem;
+    line-height: 1.35;
+    font-weight: 600;
+    color:#FFFFFF;
+    margin-bottom:14px;
+}
+
+.challenge__short__desc{
+    font-family: 'Inter', sans-serif;
+    color:#F8F9FD;
+     font-size: .8rem;
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+.level__icon__wpr{
+    width:80px;
+    background: #F8F9FD;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    gap:5px;
+    padding: 4px 0;
+}
+.level__icon{
+    width:13px;
+    height: 13px;
+}
+.level{
+    font-size: .63rem;
+}
+
+.overview__navbar{
+    width: 100%;
+    height:43px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 6px 12px 0px #DDE6ED;
+    margin-bottom:30px;
+}
+
+.overview__heading{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 10px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: .83rem;
+    border-bottom:2px solid green;
+}
+.edit__btn,
+.del__btn{
+    display: inline-block;
+    outline: none;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: .63rem;
+    font-weight: 600;
+    border:1px solid red;
+    color:red;
+    width: 75px;
+    text-align: center;
+    background: transparent;
+}
+.edit__btn{
+    margin-right: 10px;
+    background: #44924C;
+    color: #FFFFFf;
+    font-weight: 600;
+    border:none;
+}
+
+.full__description{
+    font-weight: 500;
+    font-size: .78rem;
+    padding:8px 15px;
+    color: #64607D;
+    max-width: 800px;
+
+}
+
+@media only screen and (min-width:520px) {    
+    .challenge__details__ctr{
+        height:360px;
+        padding:0 30px;
+        padding-top: 120px;
+        padding-bottom: 80px;
+    }
+    
+    .status{
+        gap:10px;
+        font-size: .7rem;
+        padding: 5px 18px;
+        padding-right: 30px;
+        margin-bottom: 10px;
+    }
+    
+    .clock__icon{
+        width:13px;
+        height: 13px;
+    }
+    
+    .challenge__title{
+        font-size: 1.6rem;
+        margin-bottom:16px;
+    }
+    
+    .challenge__short__desc{
+         font-size: .83rem;
+        margin-bottom: 20px;
+    }
+    
+    .level__icon__wpr{
+        width:80px;
+        gap:5px;
+        padding: 4px 0;
+    }
+    .level__icon{
+        width:14px;
+        height: 14px;
+    }
+    .level{
+        font-size: .65rem;
+    }
+    
+    .overview__navbar{
+        height:43px;
+        padding: 0 30px;
+        margin-bottom:40px;
+    }
+    
+    .overview__heading{
+        padding: 0 10px;
+        font-size: .85rem;
+    }
+    .edit__btn,
+    .del__btn{
+        padding: 5px 10px;
+        font-size: .65rem;
+        width: 75px;
+    }
+    .edit__btn{
+        margin-right: 10px;
+    }
+    
+    .full__description{
+        font-size: .8rem;
+        padding:8px 30px;
+    }
+        
+}
+
+@media only screen and (min-width:780px) {    
+    .challenge__details__ctr{
+        height:360px;
+        padding:0 50px;
+        padding-top: 120px;
+        padding-bottom: 80px;
+    }
+    
+    .status{
+        gap:10px;
+        font-size: .73rem;
+        padding: 5px 18px;
+        padding-right: 30px;
+        margin-bottom: 13px;
+    }
+    
+    .clock__icon{
+        width:13px;
+        height: 13px;
+    }
+    
+    .challenge__title{
+        font-size: 1.8rem;
+        margin-bottom:18px;
+    }
+    
+    .challenge__short__desc{
+         font-size: .85rem;
+        margin-bottom: 23px;
+    }
+    
+    .level__icon__wpr{
+        width:80px;
+        gap:5px;
+        padding: 4px 0;
+    }
+    .level__icon{
+        width:14px;
+        height: 14px;
+    }
+    .level{
+        font-size: .68rem;
+    }
+    
+    .overview__navbar{
+        height:45px;
+        padding: 0 50px;
+        margin-bottom:50px;
+    }
+    
+    .overview__heading{
+        padding: 0 10px;
+        font-size: .9rem;
+    }
+    .edit__btn,
+    .del__btn{
+        padding: 5px 10px;
+        font-size: .68rem;
+        width: 75px;
+    }
+    .edit__btn{
+        margin-right: 20px;
+    }
+    
+    .full__description{
+        font-size: .83rem;
+        padding:10px 50px;
+    }
+        
+}
+
+@media only screen and (min-width:1100px) {    
+    .challenge__details__ctr{
+        height:400px;
+        padding:100px 90px;
+        padding-top: 120px;
+    }
+    
+    .status{
+        gap:10px;
+        font-size: .75rem;
+        padding: 6px 20px;
+        padding-right: 30px;
+        margin-bottom: 15px;
+    }
+    
+    .clock__icon{
+        width:13px;
+        height: 13px;
+    }
+    
+    .challenge__title{
+        font-size: 2rem;
+        margin-bottom:20px;
+    }
+    
+    .challenge__short__desc{
+         font-size: .9rem;
+        margin-bottom: 25px;
+    }
+    
+    .level__icon__wpr{
+        width:80px;
+        gap:5px;
+        padding: 5px 0;
+    }
+    .level__icon{
+        width:15px;
+        height: 15px;
+    }
+    .level{
+        font-size: .7rem;
+    }
+    
+    .overview__navbar{
+        height:50px;
+        padding: 0 90px;
+        margin-bottom:60px;
+    }
+    
+    .overview__heading{
+        padding: 0 10px;
+        font-size: .9rem;
+    }
+    .edit__btn,
+    .del__btn{
+        padding: 5px 10px;
+        font-size: .7rem;
+        width: 80px;
+    }
+    .edit__btn{
+        margin-right: 20px;
+        font-size: .7rem;
+    }
+    
+    .full__description{
+        font-size: .85rem;
+        padding:10px 90px;
+    }
+        
+}
