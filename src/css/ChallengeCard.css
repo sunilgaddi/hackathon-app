@@ -1,6 +1,7 @@
 .card__section{
     width: 300px;
-    height: auto;
+
+    height:100%;
     background: #FFFFFF;
     border-radius: 15px;
 }
@@ -29,9 +30,21 @@
     font-size: .6rem;
     font-weight: 400;
     padding:5px 20px;
-    background: #F2C94C40;
     border-radius: 5px;
     margin-bottom: 15px;
+}
+
+.upcoming{
+    background: #F2C94C40;
+}
+
+.active{
+    background: #44924C3D;
+    color:#44924C;
+}
+
+.past{
+    background: #FF3C002B;
 }
 
 .challenge__name{

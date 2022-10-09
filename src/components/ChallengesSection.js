@@ -3,6 +3,7 @@ import searchicon from '../assets/icons/search.svg';
 import arrow from '../assets/icons/arrow.svg';
 import { useEffect, useState } from 'react';
 import ChallengeCard from './ChallengeCard';
+import challenges from '../data/challenges.json'
 
 const status = [
     'All', 'Active', 'Upcoming', 'Past'
@@ -11,51 +12,6 @@ const status = [
 const levels = [
     'Easy', 'Medium', 'Hard'
 ]
-
-const challenges = [
-    {
-        challengeName: 'Data Science Bootcamp - Graded Datathon',
-        startDate: '01 Nov 2022',
-        endDate: '10 Nov 2022',
-        status: '',
-        level: 'Easy'
-    },
-    {
-        challengeName: 'Data Sprint 72 - Butterfly Identification',
-        startDate: '17 Oct 2022',
-        endDate: '30 Oct 2022',
-        status: '',
-        level: 'Hard'
-    },
-    {
-        challengeName: 'Data Science Bootcamp - Weather Recognition',
-        startDate: '01 Oct 2022',
-        endDate: '10 Oct 2022',
-        status: '',
-        level: 'Medium'
-    },
-    {
-        challengeName: 'Data Sprint 70 - Airline Passenger Satisfaction',
-        startDate: '06 Oct 2022',
-        endDate: '16 Oct 2022',
-        status: '',
-        level: 'Easy'
-    },
-    {
-        challengeName: 'Engineering Graduates Employment Outcomes',
-        startDate: '15 Mar 2022',
-        endDate: '25 Mar 2022',
-        status: '',
-        level: 'Hard'
-    },
-    {
-        challengeName: 'Travel Insurance Claim Prediction',
-        startDate: '20 May 2022',
-        endDate: '25 May 2022',
-        status: '',
-        level: 'Easy'
-    },
-];
 
 const ChallengesSection = () => {
     const [statusFilters, setStatusFilters] = useState([]);

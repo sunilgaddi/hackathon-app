@@ -54,7 +54,7 @@ const ChallengeCard = ({ data }) => {
                 <img className='card__image' src={c1} alt='card_img' />
             </div>
             <div className='card__content'>
-                <span className='challenge__status'>{data?.status}</span>
+                <span className={`challenge__status ${data?.status.toLowerCase()}`}>{data?.status}</span>
                 <h3 className='challenge__name'>{data?.challengeName}</h3>
                 {(data.status === 'Active' && <span className='start__or__end__status'>Ends In</span>)
                     ||

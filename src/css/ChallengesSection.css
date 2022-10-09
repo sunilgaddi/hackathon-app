@@ -2,9 +2,15 @@
     width: 100%;
     height:auto;
     background: #003145;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+    min-height: 800px;
 }
 
 .explore__challenges__section{
+    width: 100%;
     padding: 15px;
     padding-bottom: 30px;
     background: #002A3B;
@@ -13,7 +19,7 @@
 }
 
 .section__heading{
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-weight: 600;
     color: #FFFFFF;
     text-align: center;
@@ -28,8 +34,8 @@
     width: 100%;
     outline: none;
     border: none;
-    border-radius: 5px;
-    padding:5px;
+    border-radius: 10px;
+    padding:8px;
     margin-bottom: 20px;
     padding-left: 40px;
     background: #FFFFFF;
@@ -59,7 +65,7 @@
     position: relative;
     width: 150px;
     background:#FFFFFF;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-bottom: 20px;
 }
 
@@ -70,7 +76,8 @@
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: .8rem;
-    padding:5px 10px;
+    padding:8px 10px;
+    cursor: pointer;
 }
 
 .arrow__icon__wpr{
@@ -96,7 +103,7 @@
     height: auto;
     left: 0;
     right: 0;
-    top:20px;
+    top:25px;
     background: #FFFFFF;
     transform: translateY(-50%);
     opacity: 0;
@@ -151,6 +158,8 @@
     display: flex;
     flex-wrap: wrap;
     gap:10px;
+    max-width: 850px;
+    margin: auto;
 }
 
 .filter{
@@ -168,5 +177,207 @@
     grid-template-columns: 1fr;
     justify-items: center;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
+}
+
+@media only screen and (min-width:520px){
+    .explore__challenges__section{
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 40px;
+    }
+
+    .section__heading{
+        font-size: 1.3rem;
+        margin: 30px 0;
+    }
+
+    .input__icon__wpr input{
+        padding:8px;
+        padding-left: 50px;
+        font-size: .85rem;
+    }
+    .search__icon__wpr{
+        width: 12px;
+        height: 12px;
+        left:30px;
+    }
+
+    .filters__wpr{
+        top:25px;
+    }
+    
+    .filter__title{
+        font-size: .85rem;
+        padding:8px 20px;
+    }
+    
+    .arrow__icon__wpr{
+        width: 12px;
+        height: 12px;
+    }
+
+
+    .filter__section__title{
+        font-size: .8rem;
+        margin-bottom: 5px;
+    }
+    
+    
+    .filter__label{
+        font-size: .7rem;
+        margin-left: 10px;
+    }
+    
+    .filter__checkbox{
+        width: 13px;
+        height: 13px;
+    }
+
+    .filter{
+        font-size: .65rem;
+    }
+}
+
+@media only screen and (min-width:780px){
+    .input__filter__wpr{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:30px;
+        padding-bottom: 0;
+        margin-bottom: 30px;
+    }
+
+    .explore__challenges__section{
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 50px;
+    }
+
+    .section__heading{
+        font-size: 1.6rem;
+        margin: 35px 0;
+    }
+
+    .input__icon__wpr input{
+        width:40vw;
+        padding:10px;
+        margin-bottom:0;
+        padding-left: 60px;
+        font-size: .9rem;
+    }
+    .search__icon__wpr{
+        width: 13px;
+        height: 13px;
+        left:35px;
+    }
+
+    .drop__down__wpr{
+        margin-bottom: 0;
+    }
+
+    .filters__wpr{
+        top:28px;
+    }
+    
+    .filter__title{
+        font-size: .9rem;
+        padding:10px 20px;
+    }
+    
+    .arrow__icon__wpr{
+        width: 12px;
+        height: 12px;
+    }
+
+
+    .filter__section__title{
+        font-size: .85rem;
+        margin-bottom: 5px;
+    }
+    
+    
+    .filter__label{
+        font-size: .75rem;
+        margin-left: 10px;
+    }
+    
+    .filter__checkbox{
+        width: 13px;
+        height: 13px;
+    }
+
+    .filter{
+        font-size: .7rem;
+    }
+
+    .challenge__card__wpr{
+        display: inline-grid;
+        grid-template-columns: auto auto;
+        justify-items: center;
+        align-items: center;
+        gap:40px;
+    }
+}
+
+@media only screen and (min-width:1100px){
+    .explore__challenges__section{
+        padding-bottom: 60px;
+    }
+
+    .section__heading{
+        font-size: 1.8rem;
+        margin: 40px 0;
+    }
+
+    .input__icon__wpr input{
+        padding:15px;
+        padding-left: 70px;
+        font-size: 1rem;
+    }
+    .search__icon__wpr{
+        width: 14px;
+        height: 14px;
+        left:40px;
+    }
+
+    .filters__wpr{
+        top:40px;
+    }
+    
+    .filter__title{
+        font-size: 1rem;
+        padding:15px 20px;
+    }
+    
+    .arrow__icon__wpr{
+        width: 13px;
+        height: 13px;
+    }
+
+
+    .filter__section__title{
+        font-size: .9rem;
+        margin-bottom: 5px;
+    }
+    
+    
+    .filter__label{
+        font-size: .8rem;
+        margin-left: 10px;
+    }
+    
+    .filter__checkbox{
+        width: 14px;
+        height: 14px;
+    }
+
+    .filter{
+        font-size: .8rem;
+    }
+
+    .challenge__card__wpr{
+        grid-template-columns: auto auto auto;
+    }
 }
