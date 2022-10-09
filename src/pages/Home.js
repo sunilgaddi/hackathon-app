@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import '../css/Home.css';
 
 import DashBoard from '../components/DashBoard';
+import CreateChallengeForm from '../components/CreateChallengeForm';
 
 const Home = () => {
 
@@ -21,6 +22,7 @@ const Home = () => {
         <section id='home__section'>
             <Routes>
                 <Route path='/dashboard' element={<DashBoard/>} />
+                <Route path='/create-challenge' element={<CreateChallengeForm/>} />
             </Routes>
         </section>
     );
