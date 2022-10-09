@@ -177,7 +177,7 @@ const ChallengesSection = () => {
             </div>
 
             <div className='challenge__card__wpr'>
-                {filteredData.map((item, id) => <ChallengeCard key={id} id={id} data={item} />)}
+                {filteredData.map((item, id) => <ChallengeCard key={id} id={item?.id} data={item} />)}
             </div>
         </div>
     );
