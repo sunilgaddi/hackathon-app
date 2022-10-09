@@ -36,6 +36,7 @@
 
 .upcoming{
     background: #F2C94C40;
+    color: black;
 }
 
 .active{
@@ -45,12 +46,14 @@
 
 .past{
     background: #FF3C002B;
+    color:black;
 }
 
 .challenge__name{
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 20px;
+    color:black;
 }
 
 .start__or__end__status{
