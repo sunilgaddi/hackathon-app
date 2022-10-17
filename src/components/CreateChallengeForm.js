@@ -5,6 +5,15 @@ import {useParams} from 'react-router-dom'
 import challenges from '../data/challenges.json'
 import {useState, useEffect} from 'react';
 
+import banner1 from '../assets/cardimage/b1.png'
+import banner2 from '../assets/cardimage/b2.png'
+import banner3 from '../assets/cardimage/b3.png'
+import banner4 from '../assets/cardimage/b4.png'
+import banner5 from '../assets/cardimage/b5.png'
+import banner6 from '../assets/cardimage/b6.png'
+
+const images = [banner1, banner2, banner3, banner4, banner5, banner6];
+
 
 const CreateChallengeForm = () => {
     const {id} = useParams();
@@ -14,12 +23,15 @@ const CreateChallengeForm = () => {
         level:"",
         startDate:"",
         endDate:"",
-        description:""
+        description:"",
+        image:''
     });
 
     useEffect(() => {
         if(id){
             let item = challenges[id];
+            item.startDate = new Date(item.startDate).toISOString().slice(0,19);
+            item.endDate = new Date(item.endDate).toISOString().slice(0,19);
             setChallenge(item);
         }
     },[id]);
@@ -140,6 +152,11 @@ const CreateChallengeForm = () => {
                         />
                         <label className='upload__label' htmlFor='image__upload'>Upload <img src={cloud} alt='cloud' /></label>
                     </span>
+
+                    {(challenge?.image || id) && 
+                    <div className='prev__challenge__banner__wpr'>
+                        <img className='prev__challenge__banner' src={images[challenge?.image-1]} alt='challenge-banner'/>
+                    </div>}
                 </div>
 
                 <div className='inputs__label__wpr'>
@@ -151,7 +168,7 @@ const CreateChallengeForm = () => {
                     <select
                         id='challenge__level'
                         name='level'
-                        defaultvalue={challenge?.level}
+                        defaultValue={challenge?.level}
                         onChange={(e) => handleChallengeFields(e)}
                         className='challenge__level__field challenge__field' >
                         <option className='level__options' value={challenge.level || ""}>{challenge.level || ""}</option>
